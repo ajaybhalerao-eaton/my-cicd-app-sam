@@ -17,6 +17,7 @@ Parameters:
   DatabaseUri: # Changed this to remove underscore
     Description: 'Required. MongoDB connection URL'
     Type: 'String'
+    Default: 'mongodb+srv://USER:PASSWORD@HOST/bud'
   
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
