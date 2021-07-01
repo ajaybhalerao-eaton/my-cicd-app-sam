@@ -18,18 +18,18 @@ Globals:
 
 Resources:
   # Lambda Layer
-LambdaLayer:
-  Type: AWS::Serverless::LayerVersion
-  Properties:
-    LayerName:
-      Fn::Sub: test-layer
-      # Fn::Sub: ${Environment}-${AppName}-layer
-    # Description:
-    #   Fn::Sub: Lambda layer for ${Environment}-${AppName}-layer application
-    ContentUri: dependencies
-    CompatibleRuntimes:
-    - nodejs12.x
-    RetentionPolicy: Retain
+  LambdaLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName:
+        Fn::Sub: test-layer
+        # Fn::Sub: ${Environment}-${AppName}-layer
+      # Description:
+      #   Fn::Sub: Lambda layer for ${Environment}-${AppName}-layer application
+      ContentUri: dependencies
+      CompatibleRuntimes:
+      - nodejs12.x
+      RetentionPolicy: Retain
 
   HelloWorldFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
