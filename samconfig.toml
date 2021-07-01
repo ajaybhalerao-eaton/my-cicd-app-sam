@@ -1,0 +1,6 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+region = "eu-west-2"
+parameter_overrides = "AppName=\"test\""
