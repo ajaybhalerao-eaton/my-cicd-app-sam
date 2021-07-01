@@ -14,7 +14,7 @@ phases:
       - sam build
   post_build:
     commands:
-      - sam package --s3-bucket $ARTIFACT_BUCKET --output-template-file packaged.yaml --parameter-overrides AppName=test-data-111
+      - sam package --s3-bucket $ARTIFACT_BUCKET --output-template-file packaged.yaml
 artifacts:
   files:
     - packaged.yaml
