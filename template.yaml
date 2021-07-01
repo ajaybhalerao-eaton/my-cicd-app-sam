@@ -14,6 +14,9 @@ Parameters:
     Type: Number
     Description: Percentage of debug logging printed to CloudWatch on Production environment
     Default: 0.05
+  DatabaseUri: # Changed this to remove underscore
+    Description: 'Required. MongoDB connection URL'
+    Type: 'String'
   
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -51,6 +54,7 @@ Resources:
         Variables:
           DEBUG_SAMPLE_RATE:
             Ref: DebugSampleRate
+        MONGODB_URI: !Ref DatabaseUri # Removed underscore from here as well, obviously
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
