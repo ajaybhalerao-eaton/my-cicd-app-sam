@@ -10,14 +10,6 @@ Parameters:
     Type: String
     Description: Name of application (no spaces). Value must be globally unique
     Default: example
-  DebugSampleRate:
-    Type: Number
-    Description: Percentage of debug logging printed to CloudWatch on Production environment
-    Default: 0.05
-  DatabaseUri: # Changed this to remove underscore
-    Description: 'Required. MongoDB connection URL'
-    Type: 'String'
-    Default: 'mongodb+srv://USER:PASSWORD@HOST/bud'
   
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -50,12 +42,7 @@ Resources:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
             Path: /hello
-            Method: get
-      Environment:
-        Variables:
-          DEBUG_SAMPLE_RATE:
-            Ref: DebugSampleRate
-        MONGODB_URI: !Ref DatabaseUri # Removed underscore from here as well, obviously
+            Method: get     
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
