@@ -1,0 +1,17 @@
+{
+  "name": "node-sql",
+  "version": "1.0.0",
+  "description": "base dependencies for serverless node apps",
+  "main": "index.js",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "sql-template-strings": "^2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
