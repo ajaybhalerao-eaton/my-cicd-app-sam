@@ -10,6 +10,10 @@ Parameters:
     Type: String
     Description: Name of application (no spaces). Value must be globally unique
     Default: example
+  SNSTopicARN:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: SNS Topic ARN for UserFunction to publish messages on SNS
+    Default: /dev/example/sns_topic_arn
   
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
